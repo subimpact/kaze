@@ -1,0 +1,44 @@
+<article class="case-study-wrapper">
+  <header class="case-header">
+    <div class="container case-header-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="/">Home</a> &rarr;
+        <a href="/case-studies">Showcase</a> &rarr;
+        <span aria-current="page">{{title}}</span>
+      </nav>
+
+      <div class="case-meta-top">
+        <span class="client-badge">{{client}}</span>
+        <span class="value-badge">{{value}}</span>
+      </div>
+
+      <h1 class="case-title">{{title}}</h1>
+    </div>
+  </header>
+
+  <div class="container case-body-container">
+    <div class="case-cards-layout">
+      <div class="case-card objective-card">
+        <div class="card-eyebrow">The Challenge & Objective</div>
+        <p>{{objective}}</p>
+      </div>
+
+      <div class="case-card results-card">
+        <div class="card-eyebrow">Documented Technical Results</div>
+        <ul class="results-list">
+          {{results_items}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-cta-box">
+      <div class="cta-box-kanji" aria-hidden="true">速</div>
+      <h3>Eliminate Your CI Bottlenecks</h3>
+      <p>Switch your editorial and documentation sites to Kaze for instant builds and zero server costs.</p>
+      <div class="cta-box-actions">
+        <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub &rarr;</a>
+        <a href="/case-studies" class="btn btn-outline">&larr; Back to all case studies</a>
+      </div>
+    </div>
+  </div>
+</article>

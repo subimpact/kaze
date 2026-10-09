@@ -1,0 +1,71 @@
+<section class="page-hero">
+  <div class="kanji-watermark" aria-hidden="true">問</div>
+  <div class="container page-hero-inner">
+    <div class="hero-tag-wrap">
+      <span class="eyebrow-tag">COMMUNITY & COLLABORATION</span>
+    </div>
+    <h1 class="page-title">Connect with the Maintainers</h1>
+    <p class="page-lead">Have feedback, questions about architecture, or interest in deploying Kaze across your fleet? Reach out.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div class="contact-info-card">
+      <h3>Open Source Channels</h3>
+      <p>Kaze is an open-source static site generator. For bugs, feature proposals, and contribution pull requests, visit GitHub.</p>
+
+      <div class="contact-details-list">
+        <div class="contact-detail-item">
+          <strong>GitHub Repository</strong>
+          <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener">github.com/subimpact/kaze</a>
+        </div>
+        <div class="contact-detail-item">
+          <strong>Maintainer Email</strong>
+          <a href="mailto:{{contact_email}}">{{contact_email}}</a>
+        </div>
+        <div class="contact-detail-item">
+          <strong>Primary Origin</strong>
+          <span>Tokyo & Kuala Lumpur</span>
+        </div>
+      </div>
+
+      <div class="direct-cta-block">
+        <h4>Need Fleet Consulting?</h4>
+        <p>Subimpact Collective assists enterprises migrating high-volume web properties to zero-maintenance edge architectures.</p>
+        <a href="mailto:{{contact_email}}?subject=Kaze%20Fleet%20Inquiry" class="btn btn-outline btn-sm">
+          Email Maintainers &rarr;
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <h3>Send a Message</h3>
+      <form id="contact-form" class="kaze-form" method="POST" action="/api/contact">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Alex Tan" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="alex@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="General Question">General Question</option>
+            <option value="Architecture & Features">Architecture & Feature Request</option>
+            <option value="Enterprise Migration">Enterprise Migration Inquiry</option>
+            <option value="Bug Report">Bug Report</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="How can we help with your web architecture?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message &rarr;</button>
+        <div id="form-feedback" class="form-feedback" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>

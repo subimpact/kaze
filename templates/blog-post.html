@@ -1,0 +1,43 @@
+<article class="article-wrapper">
+  <header class="article-header">
+    <div class="container article-header-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="/">Home</a> &rarr;
+        <a href="/blog">Guides</a> &rarr;
+        <span aria-current="page">{{title}}</span>
+      </nav>
+
+      <div class="article-tag-strip">
+        <span class="category-tag">{{category}}</span>
+        <span class="article-read-tag">{{read_min}} min read</span>
+      </div>
+
+      <h1 class="article-title">{{title}}</h1>
+      <p class="article-lead">{{excerpt}}</p>
+
+      <div class="article-meta">
+        <span class="meta-item author">Written by <strong>{{author}}</strong></span>
+        <span class="meta-separator">/</span>
+        <span class="meta-item date"><time datetime="{{date}}">{{date_formatted}}</time></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container article-body-container">
+    <div class="article-body">
+      {{body_html}}
+    </div>
+
+    {{faq_section}}
+
+    <div class="article-cta-box">
+      <div class="cta-box-kanji" aria-hidden="true">風</div>
+      <h3>Experience 0.01-Second Builds with Kaze</h3>
+      <p>Clone the zero-dependency Python static site generator and deploy to Cloudflare Pages today.</p>
+      <div class="cta-box-actions">
+        <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-primary">Clone Repository &rarr;</a>
+        <a href="/blog" class="btn btn-outline">&larr; Back to all guides</a>
+      </div>
+    </div>
+  </div>
+</article>

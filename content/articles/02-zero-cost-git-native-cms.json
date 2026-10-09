@@ -1,0 +1,22 @@
+{
+  "title": "Zero-Cost Git-Native Publishing: Decoupled CMS Without Server Lock-In",
+  "slug": "zero-cost-git-native-cms",
+  "date": "2026-10-08",
+  "author": "Subimpact Engineering",
+  "category": "Editorial",
+  "read_min": 5,
+  "image": "/images/blog-2.jpg",
+  "excerpt": "How Kaze decouples the editorial studio from the static generator, allowing teams to use Sveltia CMS, Obsidian, or VS Code interchangeably.",
+  "tags": ["CMS", "Sveltia", "GitOps", "Decap"],
+  "body": "Static site generators often struggle with non-technical content editing. The industry usually solves this by pushing teams toward proprietary SaaS headless CMS providers with hefty monthly subscription fees and database lock-in.\n\n### Complete Separation of Concerns\n\nKaze solves this through strict decoupling:\n\n1. **The Generator is CMS-Agnostic:** Kaze only reads plain JSON and Markdown files from the `content/` folder. It has zero knowledge of how those files were created or edited.\n2. **Open Standards:** The optional `/admin/` visual studio uses the open Decap/Sveltia specification. Any tool that adheres to this standard works out of the box.\n3. **Zero Running Costs:** Sveltia CMS runs entirely in the client browser as a single-page application. It commits changes directly to your Git repository, triggering automatic edge deployments with $0 server fees.\n\n### Workflows for Every Role\n\n- **Developers:** Edit content locally in Neovim, VS Code, or Cursor. Push commits via Git CLI.\n- **Writers and Editors:** Log into `/admin/` through GitHub authentication to edit articles, upload photos, and draft case studies with a visual interface.\n- **Knowledge Workers:** Point an Obsidian vault directly at `content/` to sync notes into live web pages.\n\nBecause the underlying data is standard JSON and Markdown, you retain full ownership of your content forever.",
+  "faq": [
+    {
+      "q": "Can I remove Sveltia CMS if I do not need it?",
+      "a": "Yes. Deleting the entire admin directory has zero impact on Kaze. The build script does not depend on Sveltia."
+    },
+    {
+      "q": "What happens when an editor saves changes in the CMS?",
+      "a": "The CMS creates a git commit directly to your GitHub repository. Your hosting platform (such as Cloudflare Pages) detects the commit and rebuilds the static files automatically."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Output
+dist/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment & Cloudflare
+.env*
+.wrangler/
+
+# OS files
+.DS_Store
+*.log

@@ -1,0 +1,22 @@
+{
+  "title": "Deploying Python Static Sites to Cloudflare Edge in 30 Seconds",
+  "slug": "edge-deployment-cloudflare-pages",
+  "date": "2026-10-07",
+  "author": "Jeremy Lee",
+  "category": "DevOps",
+  "read_min": 3,
+  "image": "/images/blog-3.jpg",
+  "excerpt": "Step-by-step blueprint for building and deploying Kaze on Cloudflare Pages with zero server costs and sub-20ms edge latency worldwide.",
+  "tags": ["Cloudflare", "Pages", "DevOps", "Edge"],
+  "body": "Static websites achieve maximum performance and resilience when served directly from edge points of presence. Here is how to wire Kaze with Cloudflare Pages for instant deployment on every git commit.\n\n### The Deployment Configuration\n\nCloudflare Pages includes Python 3 natively in its standard build environment. Wiring Kaze requires only two configuration values:\n\n1. **Build Command:** `python3 build.py`\n2. **Build Output Directory:** `dist`\n\nNo virtual environment creation, no package installs, and no build caching required. The entire compilation step finishes in 0.01 seconds on the builder.\n\n### Instant Edge Propagation\n\nOnce compiled, Cloudflare caches the static HTML, CSS, and JS across hundreds of data centers globally. Visitors experience sub-20ms Time to First Byte (TTFB), zero database latency, and complete immunity to traffic spikes.\n\n### Custom Domains and SSL\n\nCloudflare automatically provisions managed TLS certificates for your apex and subdomains. Combined with automatic HTTP/3 and edge compression (Brotli and Gzip), Kaze sites routinely achieve perfect 100/100 Lighthouse performance metrics.",
+  "faq": [
+    {
+      "q": "Do I need a paid Cloudflare account?",
+      "a": "No. Cloudflare Pages offers generous free tier limits with unlimited bandwidth and 500 builds per month."
+    },
+    {
+      "q": "Can Kaze also run on GitHub Pages or Vercel?",
+      "a": "Yes. Kaze outputs a standard static dist directory that works on GitHub Pages, Netlify, Vercel, or any standard HTTP web server."
+    }
+  ]
+}

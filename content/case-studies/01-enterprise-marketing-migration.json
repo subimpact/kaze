@@ -1,0 +1,15 @@
+{
+  "slug": "enterprise-marketing-migration",
+  "title": "Replacing a 90-Second Framework Build with 0.01s Kaze Engine",
+  "client": "Alpha Access",
+  "value": "0.01s Compilation",
+  "image": "/images/case-1.jpg",
+  "client_logo": "/images/client-1.png",
+  "objective": "Eliminate CI build bottlenecks, security patch cycles, and dependency deprecations across client editorial properties.",
+  "results": [
+    "Reduced cold CI build time from 84 seconds down to 0.01 seconds.",
+    "Eliminated 1,200+ npm packages and 450MB node_modules footprint entirely.",
+    "Achieved perfect 100/100 Lighthouse performance and accessibility scores on edge.",
+    "Decoupled editorial workflow allowing writers to edit in browser with zero server costs."
+  ]
+}

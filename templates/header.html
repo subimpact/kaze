@@ -1,0 +1,30 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand-logo" aria-label="KAZE Static Site Generator Home">
+      <span class="logo-hanko">風</span>
+      <span class="logo-title">KAZE</span>
+      <span class="logo-sub">風 / 0.01s</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary Navigation">
+      {{nav_links}}
+      <a href="/#quickstart" class="btn btn-primary btn-sm">Quickstart &rarr;</a>
+    </nav>
+
+    <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <div class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <span class="logo-hanko">風</span>
+      <span class="logo-title">KAZE</span>
+    </div>
+    <nav class="mobile-nav-links">
+      {{mobile_nav_links}}
+      <a href="/#quickstart" class="btn btn-primary btn-block">Quickstart &rarr;</a>
+    </nav>
+  </div>
+</header>

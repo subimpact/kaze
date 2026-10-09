@@ -1,0 +1,16 @@
+{
+  "members": [
+    {
+      "name": "Jeremy Lee",
+      "role": "Creator & Lead Architect",
+      "image": "/images/team-1.jpg",
+      "bio": "Systems architect and engineer. Designed Kaze to bring standard-library minimalism and instant compile speeds back to static site generation."
+    },
+    {
+      "name": "Subimpact Collective",
+      "role": "Open Source Maintainers",
+      "image": "/images/team-2.jpg",
+      "bio": "Engineering collective building resilient, edge-first tools and zero-dependency web infrastructure."
+    }
+  ]
+}

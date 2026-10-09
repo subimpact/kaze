@@ -1,0 +1,22 @@
+{
+  "title": "The Architecture of Weightlessness: Why Python Standard Library Beats 800MB Node Modules",
+  "slug": "architecture-of-weightlessness",
+  "date": "2026-10-09",
+  "author": "Jeremy Lee",
+  "category": "Architecture",
+  "read_min": 4,
+  "image": "/images/blog-1.jpg",
+  "excerpt": "Modern web tools routinely pull thousands of transitive dependencies just to generate static HTML. Here is why Kaze returns to first principles.",
+  "tags": ["Python", "Static Sites", "Performance", "Architecture"],
+  "body": "Modern web development has developed a dependency addiction. To produce a dozen static HTML files, typical toolchains pull 800+ nested npm packages, spin up a multi-gigabyte Node.js runtime, and spend 45 to 90 seconds compiling on CI.\n\n### The Standard Library Advantage\n\nPython has shipped with a world-class standard library for decades. Everything required to compile a static website is already present:\n\n1. **Filesystem Traversal:** The `os` and `shutil` modules handle directory mirroring and asset copying with zero overhead.\n2. **Structured Content:** The `json` module parses configuration and data models natively in microseconds.\n3. **Sanitization and Escaping:** The `html` module provides secure HTML entity escaping without third-party sanitizers.\n4. **Text Transformation:** The `re` module delivers industrial-grade regular expression performance for markdown parsing and token interpolation.\n\n### Instant Compilation: 0.01s Benchmark\n\nBecause Kaze has zero external packages to resolve, parse, or type-check, compilation executes in roughly 10 milliseconds. On a standard VPS or Cloudflare Pages build worker, `python3 build.py` finishes before the shell prompt can even render its status bar.\n\n### Long-Term Maintenance Immunity\n\nWhen you build with zero external pip dependencies, your project cannot break due to an abandoned package or an incompatible minor version bump. A Kaze repository written today will run identically ten years from now on any machine with Python 3.",
+  "faq": [
+    {
+      "q": "Does Kaze require any pip packages?",
+      "a": "No. Kaze relies 100% on the Python 3 standard library. You do not need to create a virtualenv or run pip install."
+    },
+    {
+      "q": "How fast does Kaze compile?",
+      "a": "A standard multi-page marketing site with blog articles, case studies, and templates compiles in approximately 0.01 seconds."
+    }
+  ]
+}

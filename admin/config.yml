@@ -1,0 +1,76 @@
+backend:
+  name: github
+  repo: your-org/your-repo # Replace with your GitHub username/repository
+  branch: main
+  # base_url: https://your-auth-worker.workers.dev # Optional: Your GitHub OAuth token exchange worker (e.g. Sveltia CMS Cloudflare Worker)
+
+# Optional local editing mode (when using @sveltia/cms local proxy)
+# local_backend: true
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: articles
+    label: Insights Articles
+    label_singular: Article
+    folder: content/articles
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} ({{date}}) - {{author}}"
+    sortable_fields: ["date", "title", "author"]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string, hint: "URL identifier e.g. 'crisis-management-playbook'" }
+      - { name: date, label: Published Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { name: author, label: Author, widget: string, default: "Agency Strategist" }
+      - { name: category, label: Category, widget: string, default: "Strategy" }
+      - { name: read_min, label: Read Time (minutes), widget: number, value_type: int, default: 5 }
+      - { name: image, label: Featured Image, widget: image, choose_url: true }
+      - { name: excerpt, label: Excerpt, widget: text, hint: "120-160 characters summary" }
+      - { name: tags, label: Tags, widget: list }
+      - { name: body, label: Body Content, widget: markdown }
+      - name: faq
+        label: Frequently Asked Questions
+        widget: list
+        required: false
+        fields:
+          - { name: q, label: Question, widget: string }
+          - { name: a, label: Answer, widget: text }
+
+  - name: case_studies
+    label: Case Studies
+    label_singular: Case Study
+    folder: content/case-studies
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} ({{value}})"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: client, label: Client Name, widget: string }
+      - { name: value, label: Documented PR / Media Value, widget: string, hint: "e.g. 'RM12M PR Value'" }
+      - { name: image, label: Hero Cover Image, widget: image }
+      - { name: client_logo, label: Client Logo, widget: image }
+      - { name: objective, label: Objective, widget: text }
+      - { name: results, label: Results Bullet Points, widget: list }
+
+  - name: team
+    label: Team Members
+    files:
+      - file: content/team.json
+        name: team_members
+        label: Team Roster
+        fields:
+          - name: members
+            label: Team Members
+            widget: list
+            fields:
+              - { name: name, label: Full Name, widget: string }
+              - { name: role, label: Role / Title, widget: string }
+              - { name: image, label: Photo, widget: image }
+              - { name: bio, label: Bio / Profile, widget: text }

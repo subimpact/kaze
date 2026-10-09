@@ -1,0 +1,55 @@
+{
+  "name": "KAZE (風)",
+  "short_name": "KAZE",
+  "kanji": "風",
+  "tagline": "The Weightless Static Site Generator for Python",
+  "url": "https://kaze.subimpact.net",
+  "description": "Zero pip dependencies. 100% Python standard library. 0.01-second instant compilation. Pure static HTML edge-cached on Cloudflare.",
+  "founded_year": 2026,
+  "github_url": "https://github.com/subimpact/kaze",
+  "contact": {
+    "email": "kaze@subimpact.net",
+    "phone": "+60 3-8000 1000",
+    "address": "Tokyo & Kuala Lumpur",
+    "whatsapp": "60123456789"
+  },
+  "nav": [
+    { "label": "Philosophy", "url": "/#philosophy" },
+    { "label": "Benchmarks", "url": "/#benchmarks" },
+    { "label": "Architecture", "url": "/#architecture" },
+    { "label": "Articles", "url": "/blog" },
+    { "label": "Showcase", "url": "/case-studies" }
+  ],
+  "stats": [
+    { "value": "0.01s", "label": "Build Time" },
+    { "value": "0", "label": "Pip Dependencies" },
+    { "value": "100%", "label": "Python Stdlib" },
+    { "value": "100/100", "label": "Lighthouse Score" }
+  ],
+  "services": [
+    {
+      "icon": "wind",
+      "kanji": "無",
+      "title": "Zero Dependencies",
+      "description": "Built 100% on Python standard library. No pip install, no virtualenv breakages, no upstream supply-chain risks."
+    },
+    {
+      "icon": "zap",
+      "kanji": "速",
+      "title": "Sub-10ms Compilation",
+      "description": "Token substitution and native regex markdown parsing compiles multi-page sites in less than a single screen refresh."
+    },
+    {
+      "icon": "layers",
+      "kanji": "解",
+      "title": "Decoupled Editorial",
+      "description": "Edit raw JSON and Markdown files directly in VS Code, Obsidian, or an optional zero-cost visual browser CMS."
+    },
+    {
+      "icon": "shield",
+      "kanji": "堅",
+      "title": "Edge Static Security",
+      "description": "Pure semantic HTML and CSS with zero server runtime or database vulnerabilities, cached globally at CDN edge."
+    }
+  ]
+}

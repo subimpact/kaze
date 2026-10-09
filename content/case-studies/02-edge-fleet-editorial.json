@@ -1,0 +1,15 @@
+{
+  "slug": "edge-fleet-editorial",
+  "title": "Zero-Maintenance Multi-Site Fleet on Cloudflare Pages",
+  "client": "Subimpact Network",
+  "value": "$0/mo Server Costs",
+  "image": "/images/case-2.jpg",
+  "client_logo": "/images/client-2.png",
+  "objective": "Deploy a fleet of high-traffic content sites with client-friendly editing without running a single database or backend server.",
+  "results": [
+    "Zero database vulnerabilities, zero patch cycles, and zero maintenance overhead.",
+    "Single-click git-native editorial flow via browser without SaaS subscriptions.",
+    "Global sub-20ms TTFB edge caching worldwide on Cloudflare Pages.",
+    "Instant rollbacks and version history backed natively by Git."
+  ]
+}

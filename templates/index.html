@@ -1,0 +1,226 @@
+<section class="hero-section">
+  <div class="kanji-watermark" aria-hidden="true">風</div>
+  <div class="vertical-kanji-rail" aria-hidden="true">
+    <span>風のように速く、水のように軽く</span>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag-wrap">
+        <span class="eyebrow-tag">PYTHON STATIC GENERATOR</span>
+        <div class="hanko-seal" aria-hidden="true">
+          <span class="hanko-inner">速風無構</span>
+        </div>
+      </div>
+
+      <h1 class="hero-title">Weightless Python.<br /><span class="text-accent">Built like wind.</span></h1>
+      <p class="hero-lead">Zero pip dependencies. 0.01-second builds. Pure standard library architecture for modern static sites.</p>
+
+      <div class="hero-actions">
+        <a href="#quickstart" class="btn btn-primary btn-lg">Quickstart &rarr;</a>
+        <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-outline btn-lg">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="telemetry-section">
+  <div class="container telemetry-grid">
+    {{stats_items}}
+  </div>
+</section>
+
+<section id="quickstart" class="section quickstart-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">Zero to Live in 3 Commands</h2>
+      <p class="section-subtext">No virtualenv setup. No pip installation. If your machine has Python 3, you are ready to compile.</p>
+    </div>
+
+    <div class="terminal-card">
+      <div class="terminal-bar">
+        <div class="terminal-dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <span class="terminal-label">bash - kaze quickstart</span>
+        <button type="button" class="btn-copy" id="copy-btn" aria-label="Copy code to clipboard">Copy</button>
+      </div>
+      <div class="terminal-body">
+        <pre><code id="quickstart-code"><span class="token-comment"># 1. Clone Kaze repository</span>
+git clone https://github.com/subimpact/kaze.git my-site
+<span class="token-comment"># 2. Enter project and run live development server</span>
+cd my-site && python3 dev.py
+<span class="token-comment"># 3. Compile instant static HTML output into dist/</span>
+python3 build.py</code></pre>
+      </div>
+      <div class="terminal-footer">
+        <span class="telemetry-pill">PYTHON 3 STDLIB</span>
+        <span class="telemetry-pill">0.01S EXECUTION</span>
+        <span class="telemetry-pill">DIST / PURE HTML</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="benchmarks" class="section benchmarks-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">The Cost of Modern Frameworks</h2>
+      <p class="section-subtext">Why pull hundreds of megabytes of nested packages to render static text and images?</p>
+    </div>
+
+    <div class="benchmark-grid">
+      <div class="benchmark-card benchmark-kaze">
+        <div class="benchmark-header">
+          <span class="benchmark-kanji">風</span>
+          <h3 class="benchmark-name">KAZE (風)</h3>
+          <span class="benchmark-sub">Standard Library</span>
+        </div>
+        <div class="benchmark-metrics">
+          <div class="metric-row">
+            <span class="metric-label">Build Time</span>
+            <span class="metric-value highlight">0.01s</span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">External Dependencies</span>
+            <span class="metric-value highlight">0 packages</span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">Install Footprint</span>
+            <span class="metric-value highlight">0 MB</span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">Server / CMS Cost</span>
+            <span class="metric-value highlight">$0 / month</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="benchmark-card benchmark-trad">
+        <div class="benchmark-header">
+          <span class="benchmark-kanji text-muted">重</span>
+          <h3 class="benchmark-name">Node / Next / Astro</h3>
+          <span class="benchmark-sub">Heavy Frameworks</span>
+        </div>
+        <div class="benchmark-metrics">
+          <div class="metric-row">
+            <span class="metric-label">Build Time</span>
+            <span class="metric-value text-dim">45.0s - 90.0s</span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">External Dependencies</span>
+            <span class="metric-value text-dim">1,200+ packages</span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">Install Footprint</span>
+            <span class="metric-value text-dim">450 - 850 MB</span>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">Server / CMS Cost</span>
+            <span class="metric-value text-dim">$50 - $200 / month</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy" class="section philosophy-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">Four Architectural Pillars</h2>
+      <p class="section-subtext">Minimalist engineering principles designed for long-term operational resilience.</p>
+    </div>
+
+    <div class="pillars-grid">
+      {{services_items}}
+    </div>
+  </div>
+</section>
+
+<section id="architecture" class="section architecture-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">How Kaze Operates</h2>
+      <p class="section-subtext">A transparent, deterministic data flow with zero hidden magic.</p>
+    </div>
+
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="step-num">01</div>
+        <div class="step-kanji">原</div>
+        <h3 class="step-title">Content Layer</h3>
+        <p class="step-desc">Site models and articles live as plain JSON and Markdown in the content directory. Edit in VS Code, Obsidian, or Sveltia CMS.</p>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">02</div>
+        <div class="step-kanji">枠</div>
+        <h3 class="step-title">Template Engine</h3>
+        <p class="step-desc">Pure semantic HTML5 templates using clean token substitution. No custom JSX compilers, no hydration overhead, no layout shifts.</p>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">03</div>
+        <div class="step-kanji">紡</div>
+        <h3 class="step-title">Instant Compiler</h3>
+        <p class="step-desc">The Python 3 standard library compiles the entire site, extracts tags, and generates dynamic sitemaps in 10 milliseconds.</p>
+      </div>
+
+      <div class="workflow-step">
+        <div class="step-num">04</div>
+        <div class="step-kanji">端</div>
+        <h3 class="step-title">Edge Deployment</h3>
+        <p class="step-desc">Static dist directory deploys instantly to Cloudflare Pages edge network for global sub-20ms delivery and 100/100 Lighthouse scores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section showcase-preview-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">Documented Case Studies</h2>
+      <p class="section-subtext">Real benchmarks from production teams replacing bulky frameworks with Kaze.</p>
+    </div>
+
+    <div class="showcase-grid">
+      {{featured_cases}}
+    </div>
+
+    <div class="section-action-center">
+      <a href="/case-studies" class="btn btn-outline">All Case Studies &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section articles-preview-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">Architecture Guides & Articles</h2>
+      <p class="section-subtext">Technical deep dives into weightless web engineering and decoupled publishing.</p>
+    </div>
+
+    <div class="articles-grid">
+      {{latest_articles}}
+    </div>
+
+    <div class="section-action-center">
+      <a href="/blog" class="btn btn-outline">Read All Guides &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-final-section">
+  <div class="container cta-final-inner">
+    <div class="cta-kanji-bg" aria-hidden="true">風</div>
+    <h2 class="cta-title">Build Faster. Ship Lighter.</h2>
+    <p class="cta-sub">Clone the repository and experience 0.01-second builds on your own machine today.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Clone on GitHub &rarr;</a>
+      <a href="/blog" class="btn btn-outline btn-lg">Explore Guides</a>
+    </div>
+  </div>
+</section>
