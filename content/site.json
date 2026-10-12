@@ -1,55 +1,51 @@
 {
   "name": "KAZE (風)",
   "short_name": "KAZE",
-  "kanji": "風",
-  "tagline": "The Weightless Static Site Generator for Python",
+  "tagline": "A small static site generator in one Python file",
   "url": "https://kaze.subimpact.net",
-  "description": "Zero pip dependencies. 100% Python standard library. 0.01-second instant compilation. Pure static HTML edge-cached on Cloudflare.",
-  "founded_year": 2026,
+  "description": "Kaze builds agency and small-business sites from JSON and Markdown using only the Python standard library.",
   "github_url": "https://github.com/subimpact/kaze",
-  "contact": {
-    "email": "kaze@subimpact.net",
-    "phone": "+60 3-8000 1000",
-    "address": "Tokyo & Kuala Lumpur",
-    "whatsapp": "60123456789"
+  "og_image": "",
+  "contact": {},
+  "pages": {
+    "about": { "title": "About", "description": "Why Kaze exists and who maintains it." },
+    "contact": { "title": "Contact", "description": "Report bugs, ask questions, or suggest changes on GitHub." },
+    "blog": { "title": "Articles", "description": "How Kaze works, how to edit content, and how to deploy it." },
+    "case_studies": { "title": "Case Studies", "description": "Sites built with Kaze." }
   },
   "nav": [
-    { "label": "Philosophy", "url": "/#philosophy" },
-    { "label": "Benchmarks", "url": "/#benchmarks" },
-    { "label": "Architecture", "url": "/#architecture" },
+    { "label": "Why Kaze", "url": "/#philosophy" },
+    { "label": "Compare", "url": "/#compare" },
+    { "label": "How it works", "url": "/#architecture" },
     { "label": "Articles", "url": "/blog" },
-    { "label": "Showcase", "url": "/case-studies" }
+    { "label": "About", "url": "/about-us" }
   ],
   "stats": [
-    { "value": "0.01s", "label": "Build Time" },
-    { "value": "0", "label": "Pip Dependencies" },
-    { "value": "100%", "label": "Python Stdlib" },
-    { "value": "100/100", "label": "Lighthouse Score" }
+    { "value": "0", "label": "Packages to install" },
+    { "value": "1", "label": "Python file" },
+    { "value": "3.8+", "label": "Python version" },
+    { "value": "MIT", "label": "License" }
   ],
   "services": [
     {
-      "icon": "wind",
       "kanji": "無",
-      "title": "Zero Dependencies",
-      "description": "Built 100% on Python standard library. No pip install, no virtualenv breakages, no upstream supply-chain risks."
+      "title": "Nothing to install",
+      "description": "Runs on Python 3.8 or newer with the standard library only. No pip, no virtualenv, no lockfile to keep updated."
     },
     {
-      "icon": "zap",
-      "kanji": "速",
-      "title": "Sub-10ms Compilation",
-      "description": "Token substitution and native regex markdown parsing compiles multi-page sites in less than a single screen refresh."
+      "kanji": "読",
+      "title": "One file you can read",
+      "description": "The whole generator is build.py, under 500 lines. When something breaks, you can find the cause yourself."
     },
     {
-      "icon": "layers",
-      "kanji": "解",
-      "title": "Decoupled Editorial",
-      "description": "Edit raw JSON and Markdown files directly in VS Code, Obsidian, or an optional zero-cost visual browser CMS."
+      "kanji": "文",
+      "title": "Content as files",
+      "description": "Pages are JSON and Markdown in your Git repo. Edit them in any editor, or optionally through Sveltia CMS."
     },
     {
-      "icon": "shield",
-      "kanji": "堅",
-      "title": "Edge Static Security",
-      "description": "Pure semantic HTML and CSS with zero server runtime or database vulnerabilities, cached globally at CDN edge."
+      "kanji": "静",
+      "title": "Plain static output",
+      "description": "The output is HTML, CSS, and a small script in dist/. Host it on anything that serves files."
     }
   ]
 }

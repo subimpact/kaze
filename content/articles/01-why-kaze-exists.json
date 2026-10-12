@@ -1,0 +1,21 @@
+{
+  "title": "Why Kaze exists, and when to use something else",
+  "slug": "why-kaze-exists",
+  "date": "2026-10-12",
+  "author": "Jeremy Lee",
+  "category": "Background",
+  "read_min": 4,
+  "excerpt": "Kaze started as a reusable starter for agency client sites. Here is what it does well, what it does not do, and which tool to pick instead.",
+  "tags": ["Background", "Comparison"],
+  "body": "Kaze started as a starter kit for agency client sites: a homepage, an about page, a contact page, articles, and case studies. The same shape kept coming up, so the build step became one Python file that fills HTML templates from JSON content.\n\nIt is not trying to replace established static site generators. It is a small, readable alternative for one kind of site.\n\n## What Kaze does\n\n- Reads `content/site.json`, `content/team.json`, and JSON files in `content/articles/` and `content/case-studies/`.\n- Fills the HTML templates in `templates/` and writes plain HTML to `dist/`.\n- Converts article bodies from a basic subset of Markdown.\n- Writes a `sitemap.xml`, plus Article and FAQPage JSON-LD for articles.\n- Uses only the Python standard library, so a fresh Python 3.8+ install can build it.\n\n## What Kaze does not do\n\n- **No custom routing.** The page types are fixed. Adding a new kind of page means editing `build.py`.\n- **Basic Markdown.** Headings, lists (one level), links, bold, italic, inline code, fenced code blocks, blockquotes, and rules. No tables, images, or nested lists.\n- **Minimal templating.** `{{placeholder}}` replacement and simple show/hide blocks. No loops or inheritance; repeated items are rendered in Python.\n- **No plugins, themes, or image processing.**\n\n## Which tool to pick instead\n\n- **Hugo:** if you want a mature, very fast generator with many themes. It ships as a single binary, so it is also dependency-free in practice.\n- **Pelican:** if you want a full-featured Python generator with Jinja2 templates and plugins, and you are fine with a pip install.\n- **Eleventy:** if you are comfortable with Node.js and want flexible templating with a simple model.\n- **Astro:** if your site needs components or client-side interactivity, or you want its integrations ecosystem.\n\n## When Kaze fits\n\nKaze fits when your site matches the built-in page types, you want to understand every line of the build, and you would rather edit a small Python file than learn a framework's configuration. If that is not you, one of the tools above will serve you better.",
+  "faq": [
+    {
+      "q": "Why does having no dependencies matter?",
+      "a": "For most projects it is not important. It helps if you want a repo that builds on any machine with Python and never needs dependency updates. If that is not a problem you have, pick the tool with the features you need."
+    },
+    {
+      "q": "Is Kaze faster than other generators?",
+      "a": "For small sites every generator is fast. Kaze builds this site in a few hundredths of a second, but Hugo is also very fast and scales to far larger sites. Speed is not the reason to choose Kaze."
+    }
+  ]
+}

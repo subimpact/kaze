@@ -1,0 +1,11 @@
+{
+  "title": "Editing content: plain files or Sveltia CMS",
+  "slug": "editing-content",
+  "date": "2026-10-11",
+  "author": "Jeremy Lee",
+  "category": "Guide",
+  "read_min": 3,
+  "excerpt": "All Kaze content is JSON in your repo. Edit it directly, or set up the optional Sveltia CMS editor for people who prefer a browser interface.",
+  "tags": ["Content", "CMS", "Sveltia"],
+  "body": "Everything Kaze builds comes from files in `content/`. The generator never talks to a database or an API.\n\n## Editing files directly\n\nOpen the JSON files in any editor, change them, and run the build:\n\n```bash\npython3 build.py\n```\n\nWhile working locally, `python3 dev.py` rebuilds on every change and serves the site at `http://localhost:8000`. Refresh the browser to see changes.\n\nArticle bodies are a Markdown string inside the JSON file. Use `\\n` for line breaks inside the JSON string.\n\n## Using Sveltia CMS (optional)\n\nThe `admin/` folder contains a [Sveltia CMS](https://github.com/sveltia/sveltia-cms) setup. Sveltia is an open-source, Git-based editor that runs in the browser and commits changes to your repository. It reads `admin/config.yml`, which follows the Decap CMS configuration format.\n\nIt does not work out of the box. You need to:\n\n1. Set `repo` in `admin/config.yml` to your GitHub repository.\n2. Provide GitHub authentication. GitHub OAuth needs a small server-side step, usually a Cloudflare Worker such as the Sveltia CMS Authenticator, set as `base_url` in the config.\n3. Deploy the site so `/admin/` is reachable.\n\nIf you do not need a browser editor, delete the `admin/` folder. The build does not depend on it.\n\n## Why files\n\nYour content stays in Git, with full history, and you can move it to another generator later. The JSON fields are documented by example in the files in `content/`."
+}

@@ -1,33 +1,32 @@
 <section class="page-hero">
   <div class="kanji-watermark" aria-hidden="true">志</div>
   <div class="container page-hero-inner">
-    <div class="hero-tag-wrap">
-      <span class="eyebrow-tag">PHILOSOPHY & ORIGIN</span>
-    </div>
-    <h1 class="page-title">The Way of the Wind.<br /><span class="text-accent">Zero Overhead.</span></h1>
-    <p class="page-lead">Why we returned to first principles to build a static site generator with zero dependencies.</p>
+    <h1 class="page-title">About Kaze</h1>
+    <p class="page-lead">Kaze (風) means wind in Japanese. The goal is a build step light enough to read in one sitting.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container text-container">
     <div class="story-block">
-      <h2>Returning to First Principles</h2>
-      <p>Modern frontend engineering has created an enormous tower of fragile abstractions. Developers now routinely download hundreds of megabytes of nested packages, configure complex bundlers, and wait through lengthy CI pipelines just to compile basic HTML pages.</p>
-      <p>Kaze (風, meaning <em>Wind</em> in Japanese) was built as an antidote to this complexity. It proves that Python's standard library is already a complete, world-class toolchain for static web generation.</p>
-      <p>By relying entirely on built-in standard library modules, Kaze delivers 0.01-second builds, zero maintenance overhead, and total immunity to upstream supply-chain risks. It runs on any machine with Python 3, today and ten years from now.</p>
+      <h2>Where it came from</h2>
+      <p>Kaze started as a starter kit for agency client sites. Most of those sites needed the same pages: a homepage, an about page, a contact page, articles, and case studies. Instead of setting up a framework each time, the build became one Python file that fills HTML templates from JSON content.</p>
+      <p>It uses only the Python standard library, so any machine with Python 3.8 or newer can build it without installing anything.</p>
+      <h2>What it is not</h2>
+      <p>Kaze is not a replacement for Hugo, Pelican, Eleventy, or Astro. It has fixed page types, basic Markdown, and no plugins. If your site needs more than that, those tools are the better choice. The <a href="/blog/why-kaze-exists">comparison article</a> goes into more detail.</p>
     </div>
   </div>
 </section>
 
+<!-- if:team -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-heading-block">
-      <h2 class="section-title">Maintainers & Collective</h2>
-      <p class="section-subtext">The engineers and systems architects stewarding the Kaze open-source project.</p>
+      <h2 class="section-title">Maintainer</h2>
     </div>
     <div class="team-grid">
       {{team_cards}}
     </div>
   </div>
 </section>
+<!-- endif:team -->

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-🍃 Kaze (風) — Local Development Server
-Zero dependencies. Automatically rebuilds on content/template changes
+🍃 Kaze (風) - local development server
+Zero dependencies. Rebuilds on content/template changes (refresh the browser to see them)
 and serves dist/ over HTTP.
 """
 
@@ -9,6 +9,7 @@ import os
 import sys
 import time
 import threading
+from functools import partial
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import build
 
@@ -43,9 +44,9 @@ def watch_loop():
             last_mtimes = current_mtimes
 
 def run_server():
-    os.chdir(build.DIST_DIR)
-    handler = SimpleHTTPRequestHandler
-    httpd = HTTPServer(('0.0.0.0', PORT), handler)
+    # Serve by path, not by chdir: build() deletes and recreates dist/ on every rebuild
+    handler = partial(SimpleHTTPRequestHandler, directory=build.DIST_DIR)
+    httpd = HTTPServer(('127.0.0.1', PORT), handler)
     print(f"\n🌐 Dev server running at http://localhost:{PORT}")
     print("   Press Ctrl+C to stop.\n")
     try:

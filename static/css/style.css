@@ -1496,3 +1496,132 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+/* Comparison section */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.compare-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+.compare-kaze {
+  grid-column: 1 / -1;
+  border-color: var(--accent);
+  box-shadow: 6px 6px 0 var(--accent-subtle);
+}
+
+.compare-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.compare-kaze .compare-name {
+  color: var(--accent);
+}
+
+.compare-when {
+  font-size: 1rem;
+}
+
+/* About, contact, article extras */
+.story-block h2 {
+  font-size: 1.75rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.story-block h2:first-child {
+  margin-top: 0;
+}
+
+.story-block p {
+  margin-bottom: 1.25rem;
+}
+
+.story-block a,
+.article-body a,
+.contact-info-card p a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section-alt {
+  background: var(--bg-elevated);
+}
+
+.contact-info-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-info-card h3 + p {
+  margin-bottom: 1.25rem;
+}
+
+.contact-action {
+  margin-bottom: 2rem;
+}
+
+.back-link-box {
+  margin-top: 3rem;
+}
+
+.article-body pre {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem;
+}
+
+.article-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+.faq-container {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+}
+
+.faq-container h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  margin-bottom: 1.75rem;
+}
+
+.faq-question {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Deploying a Kaze site to Cloudflare Pages",
+  "slug": "deploy-cloudflare-pages",
+  "date": "2026-10-10",
+  "author": "Jeremy Lee",
+  "category": "Guide",
+  "read_min": 3,
+  "excerpt": "Two ways to put a Kaze site on Cloudflare Pages: let Cloudflare build from Git, or build locally and upload dist/ with Wrangler.",
+  "tags": ["Deployment", "Cloudflare"],
+  "body": "Kaze outputs a plain folder of files, so any static host works: Cloudflare Pages, GitHub Pages, Netlify, or your own web server. These steps cover Cloudflare Pages.\n\n## Option 1: build from Git\n\n1. Push your repository to GitHub.\n2. In the Cloudflare dashboard, go to Workers & Pages, create a Pages application, and connect the repository.\n3. Set the build command to `python3 build.py` and the output directory to `dist`.\n4. Save and deploy.\n\nCloudflare's build image includes Python, and Kaze has nothing to install, so there is no dependency step.\n\n## Option 2: build locally and upload\n\nIf you prefer to build on your machine:\n\n```bash\npython3 build.py\nnpx wrangler pages deploy dist --project-name your-project\n```\n\nThis is how kaze.subimpact.net is deployed.\n\n## Custom domains\n\nIn the Pages project, add a custom domain. If the domain's DNS is on Cloudflare, the record and certificate are set up for you.\n\n## Before going live\n\n- Set `url` in `content/site.json` to your real domain. It is used for canonical links and the sitemap.\n- Add an `og_image` under `static/` if you want social previews. The build warns if the file is missing.\n- Check the build output for `[WARN]` lines, such as unfilled placeholders."
+}

@@ -1,40 +1,52 @@
 <section class="hero-section">
   <div class="kanji-watermark" aria-hidden="true">風</div>
   <div class="vertical-kanji-rail" aria-hidden="true">
-    <span>風のように速く、水のように軽く</span>
+    <span>風のように軽く</span>
   </div>
 
   <div class="container hero-inner">
     <div class="hero-content">
       <div class="hero-tag-wrap">
-        <span class="eyebrow-tag">PYTHON STATIC GENERATOR</span>
-        <div class="hanko-seal" aria-hidden="true">
-          <span class="hanko-inner">速風無構</span>
-        </div>
+        <span class="eyebrow-tag">PYTHON STATIC SITE GENERATOR</span>
       </div>
 
-      <h1 class="hero-title">Weightless Python.<br /><span class="text-accent">Built like wind.</span></h1>
-      <p class="hero-lead">Zero pip dependencies. 0.01-second builds. Pure standard library architecture for modern static sites.</p>
+      <h1 class="hero-title">Small enough to read.<br /><span class="text-accent">Simple enough to own.</span></h1>
+      <p class="hero-lead">{{site_description}}</p>
 
       <div class="hero-actions">
-        <a href="#quickstart" class="btn btn-primary btn-lg">Quickstart &rarr;</a>
+        <a href="#quickstart" class="btn btn-primary btn-lg">Quickstart</a>
         <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-outline btn-lg">GitHub</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- if:stats -->
 <section class="telemetry-section">
   <div class="container telemetry-grid">
     {{stats_items}}
+  </div>
+</section>
+<!-- endif:stats -->
+
+<section id="philosophy" class="section philosophy-section">
+  <div class="container">
+    <div class="section-heading-block">
+      <h2 class="section-title">What Kaze is</h2>
+      <p class="section-subtext">A starter for agency and small-business sites, with the build step kept small enough to read in one sitting.</p>
+    </div>
+
+    <div class="pillars-grid">
+      {{services_items}}
+    </div>
   </div>
 </section>
 
 <section id="quickstart" class="section quickstart-section">
   <div class="container">
     <div class="section-heading-block">
-      <h2 class="section-title">Zero to Live in 3 Commands</h2>
-      <p class="section-subtext">No virtualenv setup. No pip installation. If your machine has Python 3, you are ready to compile.</p>
+      <h2 class="section-title">Try it in three commands</h2>
+      <p class="section-subtext">If you have Python 3.8 or newer, there is nothing else to install.</p>
     </div>
 
     <div class="terminal-card">
@@ -44,98 +56,49 @@
           <span class="dot"></span>
           <span class="dot"></span>
         </div>
-        <span class="terminal-label">bash - kaze quickstart</span>
-        <button type="button" class="btn-copy" id="copy-btn" aria-label="Copy code to clipboard">Copy</button>
+        <span class="terminal-label">bash</span>
+        <button type="button" class="btn-copy" id="copy-btn" aria-label="Copy commands to clipboard">Copy</button>
       </div>
       <div class="terminal-body">
-        <pre><code id="quickstart-code"><span class="token-comment"># 1. Clone Kaze repository</span>
+        <pre><code id="quickstart-code"><span class="token-comment"># 1. Get the code</span>
 git clone https://github.com/subimpact/kaze.git my-site
-<span class="token-comment"># 2. Enter project and run live development server</span>
+<span class="token-comment"># 2. Preview locally at http://localhost:8000 (rebuilds on change)</span>
 cd my-site && python3 dev.py
-<span class="token-comment"># 3. Compile instant static HTML output into dist/</span>
+<span class="token-comment"># 3. Build the static site into dist/</span>
 python3 build.py</code></pre>
       </div>
-      <div class="terminal-footer">
-        <span class="telemetry-pill">PYTHON 3 STDLIB</span>
-        <span class="telemetry-pill">0.01S EXECUTION</span>
-        <span class="telemetry-pill">DIST / PURE HTML</span>
-      </div>
     </div>
   </div>
 </section>
 
-<section id="benchmarks" class="section benchmarks-section">
+<section id="compare" class="section compare-section">
   <div class="container">
     <div class="section-heading-block">
-      <h2 class="section-title">The Cost of Modern Frameworks</h2>
-      <p class="section-subtext">Why pull hundreds of megabytes of nested packages to render static text and images?</p>
+      <h2 class="section-title">Kaze is not for every site</h2>
+      <p class="section-subtext">The page types are fixed and the Markdown support is basic. If you need more, these are better choices.</p>
     </div>
 
-    <div class="benchmark-grid">
-      <div class="benchmark-card benchmark-kaze">
-        <div class="benchmark-header">
-          <span class="benchmark-kanji">風</span>
-          <h3 class="benchmark-name">KAZE (風)</h3>
-          <span class="benchmark-sub">Standard Library</span>
-        </div>
-        <div class="benchmark-metrics">
-          <div class="metric-row">
-            <span class="metric-label">Build Time</span>
-            <span class="metric-value highlight">0.01s</span>
-          </div>
-          <div class="metric-row">
-            <span class="metric-label">External Dependencies</span>
-            <span class="metric-value highlight">0 packages</span>
-          </div>
-          <div class="metric-row">
-            <span class="metric-label">Install Footprint</span>
-            <span class="metric-value highlight">0 MB</span>
-          </div>
-          <div class="metric-row">
-            <span class="metric-label">Server / CMS Cost</span>
-            <span class="metric-value highlight">$0 / month</span>
-          </div>
-        </div>
+    <div class="compare-grid">
+      <div class="compare-card compare-kaze">
+        <h3 class="compare-name">Kaze</h3>
+        <p class="compare-when">Pick it when your site fits the built-in pages (home, about, contact, articles, case studies) and you want to read and change every line of the build.</p>
       </div>
-
-      <div class="benchmark-card benchmark-trad">
-        <div class="benchmark-header">
-          <span class="benchmark-kanji text-muted">重</span>
-          <h3 class="benchmark-name">Node / Next / Astro</h3>
-          <span class="benchmark-sub">Heavy Frameworks</span>
-        </div>
-        <div class="benchmark-metrics">
-          <div class="metric-row">
-            <span class="metric-label">Build Time</span>
-            <span class="metric-value text-dim">45.0s - 90.0s</span>
-          </div>
-          <div class="metric-row">
-            <span class="metric-label">External Dependencies</span>
-            <span class="metric-value text-dim">1,200+ packages</span>
-          </div>
-          <div class="metric-row">
-            <span class="metric-label">Install Footprint</span>
-            <span class="metric-value text-dim">450 - 850 MB</span>
-          </div>
-          <div class="metric-row">
-            <span class="metric-label">Server / CMS Cost</span>
-            <span class="metric-value text-dim">$50 - $200 / month</span>
-          </div>
-        </div>
+      <div class="compare-card">
+        <h3 class="compare-name">Hugo</h3>
+        <p class="compare-when">Pick it for a mature, very fast generator with many themes. It ships as a single binary.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="philosophy" class="section philosophy-section">
-  <div class="container">
-    <div class="section-heading-block">
-      <h2 class="section-title">Four Architectural Pillars</h2>
-      <p class="section-subtext">Minimalist engineering principles designed for long-term operational resilience.</p>
-    </div>
-
-    <div class="pillars-grid">
-      {{services_items}}
+      <div class="compare-card">
+        <h3 class="compare-name">Pelican</h3>
+        <p class="compare-when">Pick it for a full-featured Python generator with Jinja2 templates and plugins.</p>
+      </div>
+      <div class="compare-card">
+        <h3 class="compare-name">Eleventy</h3>
+        <p class="compare-when">Pick it if you work in Node.js and want flexible templating with a simple model.</p>
+      </div>
+      <div class="compare-card">
+        <h3 class="compare-name">Astro</h3>
+        <p class="compare-when">Pick it when you need components, client-side interactivity, or its integrations.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -143,84 +106,72 @@ python3 build.py</code></pre>
 <section id="architecture" class="section architecture-section">
   <div class="container">
     <div class="section-heading-block">
-      <h2 class="section-title">How Kaze Operates</h2>
-      <p class="section-subtext">A transparent, deterministic data flow with zero hidden magic.</p>
+      <h2 class="section-title">How it works</h2>
+      <p class="section-subtext">One script, four steps, no hidden configuration.</p>
     </div>
 
     <div class="workflow-steps">
       <div class="workflow-step">
-        <div class="step-num">01</div>
         <div class="step-kanji">原</div>
-        <h3 class="step-title">Content Layer</h3>
-        <p class="step-desc">Site models and articles live as plain JSON and Markdown in the content directory. Edit in VS Code, Obsidian, or Sveltia CMS.</p>
+        <h3 class="step-title">Content</h3>
+        <p class="step-desc">Site settings, team, articles, and case studies are JSON files in content/. Article bodies are Markdown.</p>
       </div>
-
       <div class="workflow-step">
-        <div class="step-num">02</div>
         <div class="step-kanji">枠</div>
-        <h3 class="step-title">Template Engine</h3>
-        <p class="step-desc">Pure semantic HTML5 templates using clean token substitution. No custom JSX compilers, no hydration overhead, no layout shifts.</p>
+        <h3 class="step-title">Templates</h3>
+        <p class="step-desc">Plain HTML files with &#123;&#123;placeholders}} and simple show/hide blocks. No template language to learn.</p>
       </div>
-
       <div class="workflow-step">
-        <div class="step-num">03</div>
         <div class="step-kanji">紡</div>
-        <h3 class="step-title">Instant Compiler</h3>
-        <p class="step-desc">The Python 3 standard library compiles the entire site, extracts tags, and generates dynamic sitemaps in 10 milliseconds.</p>
+        <h3 class="step-title">Build</h3>
+        <p class="step-desc">build.py fills the templates, converts Markdown, and writes the pages, sitemap, and JSON-LD to a clean dist/.</p>
       </div>
-
       <div class="workflow-step">
-        <div class="step-num">04</div>
         <div class="step-kanji">端</div>
-        <h3 class="step-title">Edge Deployment</h3>
-        <p class="step-desc">Static dist directory deploys instantly to Cloudflare Pages edge network for global sub-20ms delivery and 100/100 Lighthouse scores.</p>
+        <h3 class="step-title">Deploy</h3>
+        <p class="step-desc">Upload dist/ to any static host. Cloudflare Pages can also build it from Git with python3 build.py.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- if:cases -->
 <section class="section showcase-preview-section">
   <div class="container">
     <div class="section-heading-block">
-      <h2 class="section-title">Documented Case Studies</h2>
-      <p class="section-subtext">Real benchmarks from production teams replacing bulky frameworks with Kaze.</p>
+      <h2 class="section-title">Case studies</h2>
     </div>
-
     <div class="showcase-grid">
       {{featured_cases}}
     </div>
-
     <div class="section-action-center">
-      <a href="/case-studies" class="btn btn-outline">All Case Studies &rarr;</a>
+      <a href="/case-studies" class="btn btn-outline">All case studies</a>
     </div>
   </div>
 </section>
+<!-- endif:cases -->
 
+<!-- if:articles -->
 <section class="section articles-preview-section">
   <div class="container">
     <div class="section-heading-block">
-      <h2 class="section-title">Architecture Guides & Articles</h2>
-      <p class="section-subtext">Technical deep dives into weightless web engineering and decoupled publishing.</p>
+      <h2 class="section-title">Articles</h2>
+      <p class="section-subtext">Background, content editing, and deployment.</p>
     </div>
-
     <div class="articles-grid">
       {{latest_articles}}
     </div>
-
-    <div class="section-action-center">
-      <a href="/blog" class="btn btn-outline">Read All Guides &rarr;</a>
-    </div>
   </div>
 </section>
+<!-- endif:articles -->
 
 <section class="section cta-final-section">
   <div class="container cta-final-inner">
     <div class="cta-kanji-bg" aria-hidden="true">風</div>
-    <h2 class="cta-title">Build Faster. Ship Lighter.</h2>
-    <p class="cta-sub">Clone the repository and experience 0.01-second builds on your own machine today.</p>
+    <h2 class="cta-title">Read the code, then decide.</h2>
+    <p class="cta-sub">If the built-in pages fit your site, clone it and edit the content. If not, one of the tools above is a better fit.</p>
     <div class="cta-buttons">
-      <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Clone on GitHub &rarr;</a>
-      <a href="/blog" class="btn btn-outline btn-lg">Explore Guides</a>
+      <a href="https://github.com/subimpact/kaze/blob/main/build.py" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Read build.py</a>
     </div>
   </div>
 </section>

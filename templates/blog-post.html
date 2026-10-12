@@ -3,7 +3,7 @@
     <div class="container article-header-inner">
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
         <a href="/">Home</a> &rarr;
-        <a href="/blog">Guides</a> &rarr;
+        <a href="/blog">Articles</a> &rarr;
         <span aria-current="page">{{title}}</span>
       </nav>
 
@@ -16,7 +16,7 @@
       <p class="article-lead">{{excerpt}}</p>
 
       <div class="article-meta">
-        <span class="meta-item author">Written by <strong>{{author}}</strong></span>
+        <span class="meta-item author">By <strong>{{author}}</strong></span>
         <span class="meta-separator">/</span>
         <span class="meta-item date"><time datetime="{{date}}">{{date_formatted}}</time></span>
       </div>
@@ -30,14 +30,8 @@
 
     {{faq_section}}
 
-    <div class="article-cta-box">
-      <div class="cta-box-kanji" aria-hidden="true">風</div>
-      <h3>Experience 0.01-Second Builds with Kaze</h3>
-      <p>Clone the zero-dependency Python static site generator and deploy to Cloudflare Pages today.</p>
-      <div class="cta-box-actions">
-        <a href="https://github.com/subimpact/kaze" target="_blank" rel="noopener" class="btn btn-primary">Clone Repository &rarr;</a>
-        <a href="/blog" class="btn btn-outline">&larr; Back to all guides</a>
-      </div>
+    <div class="back-link-box">
+      <a href="/blog" class="btn btn-outline">&larr; All articles</a>
     </div>
   </div>
 </article>

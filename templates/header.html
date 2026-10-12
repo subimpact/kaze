@@ -1,14 +1,13 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="brand-logo" aria-label="KAZE Static Site Generator Home">
+    <a href="/" class="brand-logo" aria-label="{{site_name}} home">
       <span class="logo-hanko">風</span>
-      <span class="logo-title">KAZE</span>
-      <span class="logo-sub">風 / 0.01s</span>
+      <span class="logo-title">{{site_short_name}}</span>
     </a>
 
-    <nav class="desktop-nav" aria-label="Primary Navigation">
+    <nav class="desktop-nav" aria-label="Primary navigation">
       {{nav_links}}
-      <a href="/#quickstart" class="btn btn-primary btn-sm">Quickstart &rarr;</a>
+      <a href="/#quickstart" class="btn btn-primary btn-sm">Quickstart</a>
     </nav>
 
     <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -18,13 +17,9 @@
   </div>
 
   <div class="mobile-drawer" aria-hidden="true">
-    <div class="mobile-drawer-header">
-      <span class="logo-hanko">風</span>
-      <span class="logo-title">KAZE</span>
-    </div>
-    <nav class="mobile-nav-links">
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
       {{mobile_nav_links}}
-      <a href="/#quickstart" class="btn btn-primary btn-block">Quickstart &rarr;</a>
+      <a href="/#quickstart" class="btn btn-primary btn-block">Quickstart</a>
     </nav>
   </div>
 </header>
