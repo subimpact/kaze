@@ -397,7 +397,7 @@ def build():
                 "@type": "Article",
                 "headline": a.get('title', ''),
                 "description": a.get('excerpt', ''),
-                "author": {"@type": "Person", "name": a.get('author', '')},
+                "author": {"@type": a.get('author_type', 'Person'), "name": a.get('author', '')},
                 "datePublished": a.get('date', ''),
                 "mainEntityOfPage": f"{site_url}/blog/{a['slug']}",
             }]
